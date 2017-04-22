@@ -5,15 +5,16 @@ using UnityEngine;
 public class PlayerMovement : MonoBehaviour {
 
 	// Player frame
-	public Rigidbody2D playerBody;
-	void Start() {
-		playerBody = GetComponent<Rigidbody2D>();
-	}
+	private Rigidbody2D playerBody;
 
 	// Movement Variables
 	public float mvtMaxSpeed = 6.0f;
 	public float mvtDir;
 
+
+	void Start() {
+		playerBody = GetComponent<Rigidbody2D>();
+	}
 
 	// Use this for initialization
 	void FixedUpdate () {
