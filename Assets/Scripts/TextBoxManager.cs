@@ -14,13 +14,12 @@ public class TextBoxManager : MonoBehaviour {
 	public int currentLine;
 	public int endAtLine;
 
-	public bool isTalking;
 
 	// Use this for initialization
 	void Start () 
 	{
 
-		isTalking = false;
+		PlayerPrefs.GetInt ("isTalking", 0);
 
 		if (textfile != null) 
 		{
