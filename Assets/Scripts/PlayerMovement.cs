@@ -5,13 +5,13 @@ using UnityEngine;
 public class PlayerMovement : MonoBehaviour {
 
 	// Player frame
-	public Rigidbody playerBody;
+	public Rigidbody2D playerBody;
 	void Start() {
-		playerBody = GetComponent<Rigidbody>();
+		playerBody = GetComponent<Rigidbody2D>();
 	}
 
 	// Movement Variables
-	public float mvtMaxSpeed = 10.0f;
+	public float mvtMaxSpeed = 6.0f;
 	public float mvtDir;
 
 
