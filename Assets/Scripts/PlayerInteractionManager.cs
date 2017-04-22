@@ -30,6 +30,7 @@ public class PlayerInteractionManager : MonoBehaviour {
 	void OnTriggerEnter2D (Collider2D other) {
 		actionAvailable = true;
 		marker.GetComponent<Renderer>().enabled = true;
+		PlayerPrefs.SetInt("isTalking", 1);
 		//PlayerPrefs.GetInt ("isTalking", 1);
 	}
 
