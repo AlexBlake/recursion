@@ -11,14 +11,16 @@ public class PlayerMovement : MonoBehaviour {
 	}
 
 	// Movement Variables
-	public float mvtMaxSpeed = 6.0f;
+	public float mvtMaxSpeed = 10.0f;
 	public float mvtDir;
 
 
 	// Use this for initialization
 	void FixedUpdate () {
 		// Move the player
-		playerBody.velocity= new Vector2(mvtDir * mvtMaxSpeed, playerBody.velocity.y);
+		if (PlayerPrefs.GetInt("isTalking") == 0) {
+			playerBody.velocity = new Vector2 (mvtDir * mvtMaxSpeed, playerBody.velocity.y);
+		}
 
 	}
 
